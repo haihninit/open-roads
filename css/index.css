@@ -1,0 +1,438 @@
+ul.sub-header {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+ul.sub-header a.link {
+  color: #ffffff;
+  padding: 1em 0;
+  text-decoration: none;
+  position: relative;
+}
+
+ul.sub-header a.link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  background: #f8771b;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+ul.sub-header a.link.active {
+  border-bottom: 2px solid #f8771b;
+}
+
+ul.sub-header a.link.active:hover::before {
+  width: 0;
+}
+
+ul.sub-header a.link:hover::before {
+  width: 100%;
+}
+
+section#jumbotron {
+  background: url("../assets/images/jumbotron.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section#jumbotron .jumbotron-container {
+  padding: 6em 4em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, black), color-stop(33%, transparent));
+  background: linear-gradient(90deg, black 1%, transparent 33%);
+  height: 100%;
+}
+
+section#jumbotron .jumbotron-container h1.highlight {
+  border: 1px solid #000;
+}
+
+section#jumbotron .jumbotron-container .action button.watch-now {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  color: #ffffff;
+  padding: 10px;
+}
+
+section#jumbotron .jumbotron-container .action button.watch-now:hover {
+  background: #fe5e00;
+  border: 1px solid #fe5e00;
+}
+
+section#jumbotron .jumbotron-container .action button.watch-now span {
+  margin-right: 12px;
+  letter-spacing: .125em;
+}
+
+section#about-the-series .series-container {
+  padding: 3em;
+}
+
+section#about-the-series .series-container .video-introduction .thumbnail {
+  position: relative;
+}
+
+section#about-the-series .series-container .video-introduction .thumbnail .play-icon {
+  position: absolute;
+  color: #ffffff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+section#about-the-series .series-container .video-introduction .thumbnail:hover .play-icon {
+  -webkit-transform: translate(-50%, -50%) scale(1.25);
+          transform: translate(-50%, -50%) scale(1.25);
+}
+
+section#about-the-series .series-container .video-introduction .timeline {
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: lighter;
+  margin-top: 1rem;
+}
+
+section#about-the-series .series-container .video-introduction .action button.play-trailer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+section#about-the-series .series-container .video-introduction .action button.play-trailer:hover {
+  background: #fe5e00;
+  border: 1px solid #fe5e00;
+}
+
+section#about-the-series .series-container .video-introduction .action button.play-trailer span {
+  margin-right: 12px;
+  letter-spacing: .125em;
+}
+
+section#episodes {
+  padding: 3em;
+}
+
+section#episodes .headline {
+  background: transparent;
+  color: #b1b1b1;
+  border: 1px solid #b1b1b1;
+  padding: .5em 2em;
+  font-size: .8em;
+  max-width: 200px;
+  margin-bottom: 0;
+  border-radius: 3px;
+}
+
+section#episodes .episodes {
+  padding: 0 10px;
+}
+
+section#episodes .episodes .episode-card {
+  padding: 5px;
+}
+
+section#episodes .episodes .episode-card .episode {
+  background: #1e1e1e;
+}
+
+section#episodes .episodes .episode-card .episode .thumbnail {
+  position: relative;
+  cursor: pointer;
+}
+
+section#episodes .episodes .episode-card .episode .thumbnail:hover img {
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+section#episodes .episodes .episode-card .episode .thumbnail:hover .play-icon {
+  -webkit-transform: translate(-50%, -50%) scale(1.25);
+          transform: translate(-50%, -50%) scale(1.25);
+}
+
+section#episodes .episodes .episode-card .episode .thumbnail .play-icon {
+  position: absolute;
+  color: #ffffff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  z-index: 1;
+}
+
+section#episodes .episodes .episode-card .episode .thumbnail img {
+  height: 210px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+section#episodes .episodes .episode-card .episode .content {
+  padding: 1.5em 1em;
+  border: 0.5px solid #9c9c9c2e;
+  border-top: none;
+}
+
+section#episodes .episodes .episode-card .episode .content .info {
+  color: #636363;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+}
+
+section#episodes .episodes .episode-card .episode .content .title {
+  color: #ffffff;
+  margin: 1em 0;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+}
+
+section#episodes .show-all button {
+  background: #fe5e00;
+  color: #ffffff;
+  border-radius: 0;
+  padding: 1em 2em;
+}
+
+section#episodes .show-all button:hover {
+  border: 1px solid #fe5e00;
+  background: transparent;
+  color: #fe5e00;
+}
+
+section#become-an-ambassador {
+  padding: 3em;
+}
+
+section#become-an-ambassador .form-container {
+  border: 5px solid #ffffff;
+  padding: 4em 3em;
+}
+
+section#become-an-ambassador .form-container .form-description .title {
+  color: #ffffff;
+}
+
+section#become-an-ambassador .form-container .form-description .how-it-works .label {
+  color: #636363;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+section#become-an-ambassador .form-container .form-description .how-it-works .steps {
+  list-style: none;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+section#become-an-ambassador form label {
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+section#become-an-ambassador form input, section#become-an-ambassador form button {
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  caret-color: #01be48;
+}
+
+section#become-an-ambassador form input:focus, section#become-an-ambassador form button:focus {
+  border: 1px solid #fe5e00;
+}
+
+section#become-an-ambassador form button[type=submit] {
+  background: #fe5e00;
+  color: #ffffff;
+  padding: 1em 4em;
+}
+
+section#become-an-ambassador form button[type=submit]:hover {
+  border: 1px solid #fe5e00;
+  background: transparent;
+  color: #fe5e00;
+}
+
+section#pricing-and-release-dates {
+  padding: 3em;
+}
+
+section#pricing-and-release-dates .headline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em 0;
+}
+
+section#pricing-and-release-dates .headline .pricing, section#pricing-and-release-dates .headline .release-dates {
+  padding: 5px 15px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+section#pricing-and-release-dates .headline .pricing {
+  border-radius: 2px 0 0 2px;
+}
+
+section#pricing-and-release-dates .headline .release-dates {
+  border-left: none;
+  border-radius: 0 2px 2px 0;
+}
+
+section#pricing-and-release-dates .package-container {
+  padding: 0 10px;
+}
+
+section#pricing-and-release-dates .package-container .package-card {
+  padding: 5px;
+}
+
+section#pricing-and-release-dates .package-container .package-card .package {
+  background: #2b2b2b;
+  height: 100%;
+}
+
+section#pricing-and-release-dates .package-container .package-card .package .thumbnail {
+  position: relative;
+}
+
+section#pricing-and-release-dates .package-container .package-card .package .thumbnail img {
+  height: 210px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+section#pricing-and-release-dates .package-container .package-card .package .content {
+  padding: 1em 1em;
+  color: #ffffff;
+}
+
+section#pricing-and-release-dates .package-container .package-card .package .content .brand {
+  color: #636363;
+}
+
+section#pricing-and-release-dates .package-container .package-card .package .content .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#pricing-and-release-dates .package-container .package-card .package .content .price label {
+  font-size: 2.4em;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+section#pricing-and-release-dates .package-container .package-card .package .content .price .unit {
+  margin-left: 12px;
+}
+
+section#pricing-and-release-dates .package-container .package-card .package .content .price .unit p {
+  margin-bottom: 0;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+section#pricing-and-release-dates .package-container .package-card .package .content .description {
+  margin-top: 1em;
+}
+
+section#backers {
+  padding: 3em;
+}
+
+section#backers .headline {
+  margin: 1em 0;
+  padding: 5px 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 2px;
+}
+
+section#backers .backers-container .backers .backer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section#backers .backers-container .backers .backer ul li a {
+  color: #ffffff;
+}
+
+footer section#join-the-team {
+  background: url(../assets/images/banner.jpg);
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer section#join-the-team .content-container {
+  text-align: center;
+}
+
+footer section#join-the-team .content-container .highlight {
+  border: 1px solid #000000;
+  margin-bottom: .5em;
+}
+
+footer section#join-the-team .content-container .join-us {
+  padding: .5em 1.5em;
+  letter-spacing: 0.2em;
+  border-radius: 0;
+}
+/*# sourceMappingURL=index.css.map */

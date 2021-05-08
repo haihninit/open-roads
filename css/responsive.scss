@@ -1,0 +1,78 @@
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1200px) {
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 992px) {
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+
+    nav {
+        #navbar {
+            ul {
+                li {
+                    a.nav-link {
+                        padding: 0!important;
+                    }
+                }
+                &.user-widget {
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                }
+            }    
+        }
+    }
+    ul {
+        &.sub-header {
+            justify-content: center;
+            li {
+                padding: 1em 0;
+                margin-right: 1em;
+                &.action {
+                    width: 100%;
+                    text-align: center;
+                    padding: 0;
+                    margin-top: 1em;
+                }
+            }
+        }
+    }
+
+    section {
+        &#jumbotron {
+          height: 300px;  
+          .jumbotron-container {
+              padding: 1em 2em;
+              .highlight {
+                  font-size: 1.75em;
+              }
+          }
+        }
+        &#about-the-series {
+            .series-container {
+                padding: 15px;
+            }
+        }
+        &#episodes {
+            padding: 15px;
+        }
+        &#become-an-ambassador {
+            padding: 15px;
+            .form-container {
+                padding: 2em;
+            }
+        }
+        &#pricing-and-release-dates {
+            padding: 15px;
+        }
+        &#backers {
+            padding: 15px;
+        }
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+}
